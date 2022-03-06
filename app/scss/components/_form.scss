@@ -1,0 +1,84 @@
+@use "utils" as *;
+
+.form {
+  text-align: center;
+  padding: rem(12);
+  font-family: inherit;
+
+  @include flex($direction: column, $align-items: stretch);
+
+  @include bp("large") {
+    flex-direction: row;
+    align-items: start;
+    text-align: start;
+  }
+
+  &__input,
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    border-radius: 100px;
+    padding: rem(16) rem(24);
+    outline: none;
+    font-size: rem(16);
+    font-family: inherit;
+  }
+
+  &__control {
+    @include bp("large") {
+      width: 50%;
+    }
+  }
+
+  &__input {
+    border: 1px solid $col-gray;
+    color: $col-gray;
+    position: relative;
+
+    &:focus {
+      color: $col-blue-dark;
+    }
+
+    &.error {
+      border-color: $col-secondary-red;
+    }
+  }
+
+  &__error {
+    color: $col-secondary-red;
+    font-weight: 600;
+    font-size: rem(16);
+    margin-bottom: rem(10);
+    display: none;
+    padding: 0 rem(20);
+  }
+
+  &__btn {
+    border: none;
+    min-width: 150px;
+    color: white;
+    background-color: $col-primary;
+    margin-top: rem(12);
+    font-weight: 600;
+    box-shadow: 0 5px 5px rgba($col-primary, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    @include bp("large") {
+      width: 20%;
+      margin-left: rem(12);
+      margin-top: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      filter: brightness(1.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba($col-primary, 0.5);
+      transform: translateY(1px);
+    }
+  }
+}

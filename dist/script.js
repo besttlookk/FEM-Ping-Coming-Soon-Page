@@ -1,0 +1,2 @@
+"use strict";var formEl=document.querySelector("#form"),errorEl=document.querySelector("#error");formEl.addEventListener("submit",(function(r){r.preventDefault();var e=r.target.input,t=e.value;e.classList.remove("error"),errorEl.style.display="none",/\S+@\S+\.\S+/.test(t)||(e.classList.add("error"),errorEl.style.display="block")}));
+//# sourceMappingURL=script.js.map

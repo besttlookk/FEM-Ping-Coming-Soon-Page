@@ -1,0 +1,30 @@
+@use "utils" as *;
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1 {
+  color: var(--col-txt2);
+  font-size: rem(24);
+  @include bp(large) {
+    font-size: rem(28);
+  }
+}
+
+// p{
+//   font-size: ;
+// }
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}

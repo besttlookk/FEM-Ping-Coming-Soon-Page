@@ -1,0 +1,41 @@
+@use "utils" as *;
+
+.logo {
+  img {
+    width: rem(64);
+
+    @include bp("large") {
+      width: rem(88);
+    }
+  }
+}
+
+.heading {
+  color: $col-gray;
+  font-size: rem(24);
+
+  @include bp("large") {
+    font-size: rem(40);
+  }
+
+  span {
+    font-weight: 700;
+    color: $col-blue-dark;
+  }
+}
+
+.subheading {
+  font-size: rem(14);
+}
+.illustration {
+  // padding: rem(1);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+
+    @include bp(large) {
+      width: 60%;
+    }
+  }
+}

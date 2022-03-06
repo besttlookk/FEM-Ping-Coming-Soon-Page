@@ -1,0 +1,34 @@
+@use "utils" as *;
+
+.footer {
+  margin-top: 100px;
+  &__icons {
+    @include flex($gap: 20px);
+  }
+
+  &__icon {
+    @include flex();
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $col-gray;
+    padding: 10px;
+    cursor: pointer;
+
+    &:first-child {
+      img {
+        width: 70%;
+      }
+    }
+
+    img {
+      width: 100%;
+      fill: $col-primary;
+    }
+  }
+
+  &__credit {
+    font-size: rem(18);
+    color: $col-gray;
+  }
+}

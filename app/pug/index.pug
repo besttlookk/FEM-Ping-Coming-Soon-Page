@@ -1,0 +1,16 @@
+extends templates/layout 
+
+block main 
+  .logo.u-mt-huge
+    img(alt="logo" src="../images/logo.svg")
+  p.heading.u-mt-large We are launching
+    span  soon!
+  p.subheading.u-mt-small Subscribe and get notified
+  form.form.u-mt-small#form
+    .form__control
+      input.form__input(placeholder="Your email address" name="input")
+      p.form__error#error.u-mt-tiny Please provide a valid email address
+    button.form__btn(type="submit") Notify Me 
+
+  .illustration.u-mt-huge
+    img(alt="illustration" src="../images/illustration-dashboard.png")

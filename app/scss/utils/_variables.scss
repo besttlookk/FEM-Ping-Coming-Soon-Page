@@ -1,0 +1,14 @@
+@use "functions" as *;
+
+// COLOR
+$col-primary: hsl(223, 87%, 63%);
+$col-secondary-blue: hsl(223, 100%, 88%);
+$col-secondary-red: hsl(354, 100%, 66%);
+$col-gray: hsl(0, 0%, 59%);
+$col-blue-dark: hsl(209, 33%, 12%);
+
+// FONT-SIZE
+$font-size-base: rem(20);
+
+// FONT
+$font-primary: "Libre Franklin", sans-serif;
